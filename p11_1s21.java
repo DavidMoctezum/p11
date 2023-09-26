@@ -2,75 +2,85 @@ import java.util.Scanner;
 
 public class p11_1s21{
 	public static void main(String[] args) {
-		Scanner teclado = new Scanner (System.in);
-		System.out.println("Ingresa la operacion que desea realizar (suma,resta,multiplicacion,division,potencia,raiz cuadrada), ");
-		String opc="suma";
-		opc=teclado.nextLine();
-		switch(opc){
-		case "suma":
-			System.out.println("Haremos una suma");
-			Scanner input = new Scanner(System.in);
-			int a,b,c;
-			System.out.println("Ingresa dos valores: ");
-			a = input.nextInt();
-			b = input.nextInt();
-			c = a + b;
-			System.out.println("La suma es:" + c);
-			break;
+		Scanner teclado= new Scanner(System.in);
+		Scanner numero= new Scanner(System.in);
+		String operacion;
+		String temp;
+		int num1, num2;
+		int resultado;
+		double b, e, potencia;
+		double n,raiz;
 
-		case "resta":
-			System.out.println("Haremos una resta");
-			Scanner res = new Scanner(System.in);
-			int ar,br,cr;
-			System.out.println("Ingresa dos valores: ");
-			ar = res.nextInt();
-			br = res.nextInt();
-			cr = ar - br;
-			System.out.println("La resta es:" + cr);
-			break;
+		System.out.println("programa que realiza operaciones basicas");
+		System.out.println("que operacion deseas: suma, resta, multiplicacion, division, potencia, raiz cudrada");
+		operacion = teclado.nextLine();
+		if (operacion.equals("Suma")){
+			System.out.println("aqui debemos realizar una suma");
+			System.out.println("ingresa primer numero");
+			temp = teclado.nextLine();
+			num1 = Integer.parseInt(temp);
+			System.out.println("ingresa un segundo numero");
+			temp = teclado.nextLine();
+			num2 = Integer.parseInt(temp);
+			resultado = num1 + num2;
+			System.out.println("la suma es: "+resultado);
 
-		case "multiplicacion":
-			System.out.println("Haremos una multiplicacion");
-			Scanner mul = new Scanner(System.in);
-			int am,bm,cm;
-			System.out.println("Ingresa dos valores: ");
-			am = mul.nextInt();
-			bm = mul.nextInt();
-			cm = am * bm;
-			System.out.println("La multiplicacion es:" + cm);
-			break;
-		case "division":
-			System.out.println("ingrese la division");
-			Scanner div = new Scanner(System.in);
-			int ad,bd,cd;
-			System.out.println("Ingresa dos valores: ");
-			ad = div.nextInt();
-			bd = div.nextInt();
-			cd = ad / bd;
-			System.out.println("La division es:" + cd);
-			break;
-		case "potencia":
-			System.out.println("haremos una potencia");
-			Scanner pot = new Scanner(System.in);
-			int ap,bp,cp;
-			System.out.println("Ingresa dos valores: ");
-			ap = pot.nextInt();
-			bp = pot.nextInt();
-			cp = ap  bp;
-			System.out.println("La potencia es:" + cp);
-			break;
-			case "raiz cuadrada":
-			System.out.println("ingrese la raiz cuadrada");
-			Scanner raz = new Scanner(System.in);
-			int az,bz,cz;
-			System.out.println("Ingresa dos valores: ");
-			az = raz.nextInt();
-			bz = raz.nextInt();
-			cz = az - bz;
-			System.out.println("La raiz es:" + cz);
-			break;
-		default:
-			System.out.println("no se encuentra la opcion");
-		}
-	}
+		} else if (operacion.equals("resta")){
+			System.out.println("aqui debemos realizar una resta");
+			        System.out.println("ingresa primer numero");
+			temp = teclado.nextLine();
+			num1 = Integer.parseInt(temp);
+			System.out.println("ingresa segundo numero");
+			temp = teclado.nextLine();
+			num2 = Integer.parseInt(temp);
+			resultado = num1 - num2;
+			System.out.println("la resta es: " + resultado);
+
+
+        } else if (operacion.equals("multiplicacion")){
+        	System.out.println("aqui vamos a realizar una multiplicacion");
+        	        System.out.println("ingresa primer numero");
+        	temp = teclado.nextLine();
+        	num1 = Integer.parseInt(temp);
+        	System.out.println("ingresa segundo numero");
+        	temp = teclado.nextLine();
+        	num2 = Integer.parseInt(temp);
+        	resultado = num1 * num2;
+        	System.out.println("el resultado es: " + resultado);
+
+
+        } else if (operacion.equals("division")){
+        	System.out.println("aqui vamos a realizar una division");
+        	        System.out.println("ingresa primer numero");
+        	temp = teclado.nextLine();
+        	num1 = Integer.parseInt(temp);
+        	System.out.println("ingresa segundo numero");
+        	temp = teclado.nextLine();
+        	num2 = Integer.parseInt(temp);
+        	resultado = num1 / num2;
+        	System.out.println("el resultado es: " + resultado);
+
+
+        } else if (operacion.equals("potencia")){
+        	System.out.println("aplicacion de potencia");
+        	System.out.println("ingrese el valor de la base");
+        	b = numero.nextInt();
+        	System.out.println("ingresa el valor del exponente");
+        	e = numero.nextInt();
+        	potencia= Math.pow(b,e);
+        	System.out.println(" El resultado es");
+        	System.out.println(potencia);
+        
+
+        } else if (operacion.equals("raiz cuadrada")){
+        	System.out.println("Aplicacion raiz");
+        	System.out.println("Ingrese un numero para obtener su raiz cuadrada");
+        	n= numero.nextDouble();
+        	raiz=Math.sqrt(n);
+        	System.out.println("El resultado es");
+        	System.out.println(raiz);
+
+        }
+    }
 }
+
